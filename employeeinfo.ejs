@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="" method="post">
+        <div class="container">
+            <label for="name">Enter Name :</label>
+            <input type="text" name="name" placeholder="Enter Name" required>
+
+            <label for="age">Enter Age :</label>
+            <input type="text" name="age" placeholder="Enter Age" required>
+
+            <label for="number">Enter No.</label>
+            <input type="text" name="number" placeholder="Enter Number" required>
+
+            <button type="submit">submit</button>
+            
+        </div>
+        <br>
+        <hr>
+        <%# show table data %>
+        <table>
+        <thead>
+            <tr>
+                <th >No.</th>
+                <th >Name</th>
+                <th >Age</th>
+                <th >Action</th>
+            </tr>
+        </thead>
+        
+        <% data.forEach(item => { %> 
+            <% var i=1 %>
+         <tr>
+            <td>
+                <%= i++ %>
+            </td>
+            <td>
+                <%= item.name  %>
+            </td>
+            <td>
+                <%= item.age %>
+            </td>
+            <td>
+               <Form action="../employee/edit/<%= item._id %>" method="get" >
+                <button type="submit">Edit</button>
+               </Form>
+            </td>
+            <td>
+                <Form action="../employee/delete/<%= item._id %>" method="post" >
+                 <button type="submit">Delete</button>
+                </Form>
+             </td>
+         </tr>
+        <% }) %>
+        <tbody> 
+
+        </tbody>
+       </table> 
+
+    </form>
+</body>
+</html>

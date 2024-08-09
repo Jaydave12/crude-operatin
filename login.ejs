@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login page</title>
+    <style>
+        body{
+            width: 100%;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items:center ;
+     }
+     .container{
+       max-width: 50%;
+        max-height:80%;
+        padding-left:30px;
+        padding-right:30px;
+        padding-bottom: 20px;
+        
+        background-color: antiquewhite;
+        border-radius: 10%;
+     }
+     input{
+        width: 100%;
+         padding: 12px 20px;
+         margin: 8px 0;
+         display: inline-block;
+         border: 1px solid #ccc;
+         box-sizing: border-box;
+
+     }
+     button{
+        background-color: #04AA6D;
+        color: white;
+        padding: 14px 20px;
+        margin: 8px 0;
+        border: none;
+        cursor: pointer;
+        width: 100%;
+     }
+     button:hover {
+  opacity: 0.8;
+}
+.singup{
+    margin: 10px;
+    text-align: center;
+    width: 100%;
+}
+    </style>
+</head>
+<body>
+    <form action="" method="post">
+    <div class="container">
+        <h1>Login</h1>
+        <label for="email">Enter Email :</label>
+        <input type="text"  placeholder="Enter Email " name="email" required>
+
+        <label for="password">Enter Email :</label>
+        <input type="password"  placeholder="Enter password " name="password" required>
+
+        <button type="submit"> Login</button>
+        <div class="singupe">
+            <a href="/signup">SignUp</a>
+        </div>
+        
+
+    </div>
+</form>
+</body>
+</html>

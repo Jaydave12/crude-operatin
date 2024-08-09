@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+  <form action="../update/<%= data._id %>"  method="post">
+    <div class="container">
+        <div class="row">
+          <div >
+            <h2 >Update Student</h2>
+            <form  action="" method="post">
+              <div >
+                <label for="name" class="form-label">Name</label>
+                <input type="text"  id="name" name="name" value="<%= data.name %>" />
+              </div>
+              <div >
+                <label for="age" class="form-label">Age</label>
+                <input type="text" class="form-control" id="age" name="age" value="<%= data.age %>" />
+              </div>
+              <div >
+                <label for="number" class="form-label">number</label>
+                <input type="text" id="number" name="number" value="<%= data.number %>" />
+              </div>
+              <button type="submit" >Update</button>
+            
+            </form>
+          </div>
+        </div>
+      </div>
+      </form>
+</body>
+</html>
